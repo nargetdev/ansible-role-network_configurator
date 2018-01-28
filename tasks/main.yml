@@ -1,0 +1,10 @@
+---
+# tasks file for network_configurator
+# To add an Ethernet connection with static IP configuration, issue a command as follows
+- nmcli:
+  conn_name: my-eth0
+  ifname: eth0
+  type: ethernet
+  ip4: 10.200.1.32/24 # 0-31 :: workstation machines (i.e. show computer, 32-63 embedded controllers (i.e. RPi))
+  gw4: 10.200.1.1
+  state: present
